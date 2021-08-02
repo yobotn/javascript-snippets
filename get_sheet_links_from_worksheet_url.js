@@ -14,8 +14,7 @@ async function get_sheets_info(link) {
 		let sheet_name  = find_sheets_response.feed.entry[index].title.$t;
 		let sheet_link  = hagdarot_sheet_name  = find_sheets_response.feed.entry[index].link[0].href+'?alt=json';
 		
-		sheets_dict[sheet_name]= sheet_name;
-		sheets_dict['sheet_link'] = sheet_link;
+		sheets_dict[sheet_name]= sheet_link;
 
 	}
 	
@@ -24,6 +23,6 @@ async function get_sheets_info(link) {
 
 			
 (async () => { 
-	let result = await get_sheets_info('https://docs.google.com/spreadsheets/d/1FuoOKw6');
+	let result = await get_sheets_info('https://docs.google.com/spreadsheets/d/1FuoOKw6F3lW3NO62k_9vlzEv7COvz9CB-XmeF1BsKeE/edit#gid=2017037451');
 	console.log(result)
 })();
