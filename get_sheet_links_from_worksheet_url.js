@@ -7,7 +7,7 @@ async function get_sheets_info(link) {
 		
 	let find_sheets = await fetch('https://spreadsheets.google.com/feeds/worksheets/' + worksheet_id + '/public/full?alt=json');
 
-    let find_sheets_response = await find_sheets.json();			
+    	let find_sheets_response = await find_sheets.json();			
 				
 	for (let index in find_sheets_response.feed.entry) {
 		
